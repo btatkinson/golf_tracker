@@ -1,0 +1,25 @@
+@import 'styles/_colors.scss';
+@import 'styles/_fonts.scss';
+
+
+.LBPlayer{
+  color:white;
+}
+.LBP-main{
+  display: inline-block;
+  justify-content: center;
+  align-items: left;
+}
+.LBP-pname{
+  font-size: 35px;
+}
+.LBP-rounds{
+  display:flex;
+}
+.LBP-strokes{
+  list-style: none;
+  margin: 0 15px;
+}
+
+
+// end
