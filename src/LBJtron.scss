@@ -1,0 +1,116 @@
+@import 'styles/_colors.scss';
+@import 'styles/_fonts.scss';
+
+
+.LBJtron{
+  background-color: $dark-grey;
+  border-radius: 10px;
+
+  margin: auto;
+  width: 85%;
+  overflow: hidden;
+}
+
+.LBJ-icon{
+  padding-right: 10px;
+}
+.LBJ-neon{
+  font-size: 25px;
+  color: $primary;
+  filter: drop-shadow(0 0 15px lighten($primary, 10%));
+  margin-bottom: 3px;
+
+  // -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  // -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  // animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+// @-webkit-keyframes neon1 {
+//   from {
+//     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+//   }
+//   to {
+//     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+//   }
+// }
+
+.LBJtron>.LBJ-maintext{
+  padding:45px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.LBJ-title{
+  font-family: 'Barlow', sans-serif;
+  color: $primary;
+  font-size: 100px;
+  margin-bottom: -10px;
+}
+
+.LBJ-mainrow{
+  font-family: 'Alegreya Sans', sans-serif;
+  color: $dark-primary;
+  margin-left: 50px;
+  position: relative;
+  display: flex;
+  // justify-content: center;
+  align-items: baseline;
+}
+.LBJ-ipcell{
+  padding: 40px;
+  font-size: 25px;
+  margin: auto;
+}
+.LBJ-moneycell{
+  float: left;
+  font-size: 40px;
+  padding:0px;
+  margin: auto;
+}
+.LBJ-secondaryrow{
+  font-family: 'Alegreya Sans', sans-serif;
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+}
+.LBJ-secondarycell{
+  font-size: 20px;
+  width:33%;
+}
+@media screen and (max-width: 850px) {
+  h2{
+    margin:10px;
+  }
+  .LBJ-title{
+    color: $primary;
+    margin-left: 50px;
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .LBJ-mainrow{
+    color: $dark-primary;
+    margin-left: 50px;
+    // position: absolute;
+    display: block;
+    // justify-content: center;
+    align-items: baseline;
+  }
+  .LBJ-ipcell{
+    font-size: 20px;
+    margin: auto;
+    width: 100%;
+    padding: 0px;
+  }
+  .LBJ-moneycell{
+    float: left;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    width:100%;
+    padding: 0px;
+
+  }
+}

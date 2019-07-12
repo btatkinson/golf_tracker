@@ -1,6 +1,6 @@
 import React from 'react';
 import Leaderboard from './Leaderboard';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

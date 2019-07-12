@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import LBPlayer from './LBPlayer';
-import './Leaderboard.css';
+import LBJtron from './LBJtron';
+import LBJtable from './LBJtable';
+import './Leaderboard.scss';
 
 const PGA_BASE_URL = "https://statdata.pgatour.com/r";
 
@@ -13,7 +14,6 @@ class Leaderboard extends Component {
       current: null,
       pga_leaderboard: null,
       isLoaded: false,
-      field:null
     };
 
   }
@@ -34,20 +34,8 @@ class Leaderboard extends Component {
       <div>
         {this.state.isLoaded ? (
           <div>
-            <h1>Tour Leaderboard</h1>
-            <table>
-              <thead>
-                <tr>
-                  <th>Pos</th>
-                  <th>Name</th>
-                  <th>Total</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.state.pga_leaderboard.leaderboard.players.map(
-                  p => <LBPlayer key={p.player_id} pos={p.current_position} bio={p.player_bio} total={p.total} />)}
-              </tbody>
-            </table>
+            <LBJtron info={this.state.pga_leaderboard.leaderboard} />
+            <LBJtable data={this.state.pga_leaderboard.leaderboard} />
           </div>
         ) : (
         <div className="lb-container">
