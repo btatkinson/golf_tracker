@@ -15,7 +15,7 @@ class LBPlayer extends Component{
                 (r,index) => <li className='LBP-strokes' key={index}>{r.strokes}</li>)}
             </ul>
           </td>
-          <td></td>
+          <td>Sup</td>
           <td>
           {this.props.player_data.total}
           {this.props.player_data.current_position}

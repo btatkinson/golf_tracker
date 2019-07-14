@@ -4,17 +4,32 @@
 
 .LBPlayer{
   color:white;
+  border-radius: 10px;
 }
+
+td {
+  border-top: solid 1px #000;
+  border-bottom: solid 1px #000;
+  padding: 20px;
+}
+tr:first-child td:first-child { border-top-left-radius: 10px; }
+tr:first-child td:last-child { border-top-right-radius: 10px; }
+tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+
 .LBP-main{
-  display: inline-block;
-  justify-content: center;
-  align-items: left;
+  text-align: left;
 }
 .LBP-pname{
-  font-size: 35px;
+  font-size: 40px;
+  margin-top:5px;
+  margin-bottom:5px;
 }
 .LBP-rounds{
   display:flex;
+  padding-left: 0px;
+  margin-top:5px;
+  margin-bottom: 5px;
 }
 .LBP-strokes{
   list-style: none;
