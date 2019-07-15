@@ -18,6 +18,7 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
 
 .LBP-main{
   text-align: left;
+  position: relative;
 }
 .LBP-pname{
   font-size: 40px;
@@ -29,6 +30,14 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
   padding-left: 0px;
   margin-top:5px;
   margin-bottom: 5px;
+}
+.LBP-sg{
+  display:flex;
+  padding-left: 0px;
+  margin-top:-5px;
+  margin-bottom: 0px;
+  padding-left: 10px;
+  z-index: 2;
 }
 .LBP-strokes{
   list-style: none;
@@ -47,6 +56,54 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
 .LBP-eye:hover{
   cursor: pointer;
   color:$primary;
+}
+
+.LBP-score{
+  position:relative;
+  vertical-align: middle;
+}
+
+.LBP-total{
+  display: inline-table;
+  height: 100px;
+  width: 100px;
+  background-color: $dark-grey;
+  border-radius: 50%;
+  margin: 0px 0px 0px 80px;
+}
+.LBP-pos{
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 25px;
+  right: 60px;
+  vertical-align: middle;
+  line-height: 35px;
+  background-color: $light-grey;
+  border-radius: 50%;
+}
+.LBP-stext{
+  display: inline-table;
+  font-size: 40px;
+  top:50%;
+  bottom:50%;
+  margin:0px;
+  padding-top:20px;
+}
+.LBP-ptext{
+  color:white;
+  position: absolute;
+  font-size: 20px;
+  margin: 0px;
+  background-color: $light-grey;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  bottom: 10%;
+  right:30%;
+  z-index: 2;
+  line-height: 38px;
 }
 
 

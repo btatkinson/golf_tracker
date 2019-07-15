@@ -1,8 +1,25 @@
 @import 'styles/_colors.scss';
 @import 'styles/_fonts.scss';
 
+
+.LBJtable-header{
+  font-family: 'Barlow', sans-serif;
+  color: white;
+  font-size: 50px;
+  margin: 0px;
+}
+.LBJheader-container{
+  margin: auto;
+  width: 85%;
+  overflow: hidden;
+  display: flex;
+
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
 .LBJtable-container{
-  background-color: $dark-grey;
+  background-color: $grey;
   border-radius: 10px;
 
   margin: auto;
