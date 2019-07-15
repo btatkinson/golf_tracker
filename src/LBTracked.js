@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import LBPlayer from './LBPlayer';
-import './LBJtable.scss';
+import './LBTracked.scss';
 
-class LBJtable extends Component{
+
+class LBTracked extends Component{
   constructor(props) {
     super(props);
+
+    this.state = {
+      tracked: this.props.tracked
+    }
+  }
+  componentWillReceiveProps(nextProps) {
+    this.setState({ tracked: nextProps.tracked });
   }
 
   render(){
-    return (
+    return(
       <div className="LBJtable-container">
         <table className="LBJtable">
             <tbody>
-              {this.props.players.map(
+              {this.state.tracked.map(
                 p => <LBPlayer
                 key={p.player_id}
                 pdata={p}
@@ -22,8 +30,10 @@ class LBJtable extends Component{
                 />)}
             </tbody>
           </table>
-        </div>);
+        </div>
+    )
   }
+
 }
 
-export default LBJtable
+export default LBTracked

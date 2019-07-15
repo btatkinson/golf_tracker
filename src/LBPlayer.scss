@@ -8,8 +8,7 @@
 }
 
 td {
-  border-top: solid 1px #000;
-  border-bottom: solid 1px #000;
+  border-bottom: solid 3px #222629;
   padding: 20px;
 }
 tr:first-child td:first-child { border-top-left-radius: 10px; }
@@ -34,6 +33,20 @@ tr:last-child td:last-child { border-bottom-right-radius: 10px; }
 .LBP-strokes{
   list-style: none;
   margin: 0 15px;
+}
+.track-cell{
+  width: 10%;
+}
+.LBP-eye{
+  cursor: pointer;
+  color: white;
+}
+.eye-selected{
+  color:$primary;
+}
+.LBP-eye:hover{
+  cursor: pointer;
+  color:$primary;
 }
 
 
