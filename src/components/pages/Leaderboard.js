@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import _ from 'lodash';
-import LBJtron from './LBJtron';
-import LBJtable from './LBJtable';
-import LBTracked from './LBTracked';
-import './Leaderboard.scss';
+import LBJtron from '../../LBJtron';
+import LBJtable from '../../LBJtable';
+import LBTracked from '../../LBTracked';
+import { Link } from 'react-router-dom';
+import '../../Leaderboard.scss';
 
 const PGA_BASE_URL = "https://statdata.pgatour.com/r";
 
@@ -92,6 +93,7 @@ class Leaderboard extends Component {
 
     return(
       <div>
+        <Link to="/login">Login</Link>
         {this.state.isLoaded ? (
           <div>
             <LBJtron info={this.state.pga_leaderboard.leaderboard} />
