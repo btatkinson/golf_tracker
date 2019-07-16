@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+import LoginForm from '../forms/LoginForm';
 
 class Login extends Component {
   constructor(props) {
     super(props);
   }
+
+  submit=(data)=>{
+    console.log(data);
+  }
+
   render(){
     return(
       <div>
-        <h1>Login Page</h1>
+        <LoginForm submit={this.submit}/>
       </div>
     )
   }
