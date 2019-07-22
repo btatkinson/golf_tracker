@@ -10,7 +10,7 @@ class Login extends Component {
     super(props);
   }
 
-  submit = data => this.props.login(data).then(()=>this.props.history.push("/"));
+  submit = data => this.props.login(data).then(()=>this.props.history.push("/dashboard"));
 
   render(){
     return(

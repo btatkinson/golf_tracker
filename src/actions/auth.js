@@ -19,4 +19,5 @@ export const login = credentials => (dispatch) =>
 export const logout = () => dispatch => {
     localStorage.removeItem(localStorage.golftrackerJWT);
     dispatch(userLoggedOut());
+    localStorage.clear();
 };
