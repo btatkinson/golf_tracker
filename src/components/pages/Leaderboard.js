@@ -4,7 +4,10 @@ import _ from 'lodash';
 import LBJtron from '../../LBJtron';
 import LBJtable from '../../LBJtable';
 import LBTracked from '../../LBTracked';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { logout } from '../../actions/auth';
 import '../../Leaderboard.scss';
 
 const PGA_BASE_URL = "https://statdata.pgatour.com/r";
@@ -14,7 +17,6 @@ class Leaderboard extends Component {
     super(props);
 
     this.rnd_averages = [null,null,null,null]
-
     this.state = {
       current: null,
       pga_leaderboard: null,
@@ -24,7 +26,7 @@ class Leaderboard extends Component {
       threeball:[],
       dkTeams:[],
     };
-
+    this.logout = this.props.logout.bind(this);
   }
 
   determine_stroke_averages(cr, finished){
@@ -93,9 +95,9 @@ class Leaderboard extends Component {
 
     return(
       <div>
-        <Link to="/login">Login</Link>
         {this.state.isLoaded ? (
           <div>
+            { this.props.isAuthenticated ? <button onClick={this.logout}>Logout</button> : <Link to="/login">Login</Link>}
             <LBJtron info={this.state.pga_leaderboard.leaderboard} />
             <LBTracked
               tracked={this.state.tracking}
@@ -125,12 +127,17 @@ class Leaderboard extends Component {
     );
   }
 }
+function mapStateToProps(state){
+  console.log(state);
+  return {
+    isAuthenticated: !!state.user.token
+  }
+}
+
+Leaderboard.propTypes = {
+  isAuthenticated: PropTypes.bool.isRequired,
+  logout: PropTypes.func.isRequired
+};
 
 
-
-
-
-
-
-
-export default Leaderboard;
+export default connect(mapStateToProps, { logout })(Leaderboard);

@@ -3,6 +3,7 @@ import LoginForm from '../forms/LoginForm';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { login } from '../../actions/auth';
+import '../../styles/Login.scss';
 
 class Login extends Component {
   constructor(props) {
@@ -14,7 +15,11 @@ class Login extends Component {
   render(){
     return(
       <div>
-        <LoginForm submit={this.submit}/>
+        <div className="LF-page">
+          <div className="LF-form-container">
+            <LoginForm submit={this.submit}/>
+          </div>
+        </div>
       </div>
     )
   }
