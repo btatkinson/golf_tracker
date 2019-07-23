@@ -21,3 +21,12 @@ export const logout = () => dispatch => {
     dispatch(userLoggedOut());
     localStorage.clear();
 };
+
+export const confirm = (token) => dispatch => {
+  console.log("hello from auth");
+  api.user.confirmToken(token)
+  .then(user=>{
+    localStorage.golftrackerJWT = user.token;
+    dispatch(userLoggedIn(user));
+  });
+};

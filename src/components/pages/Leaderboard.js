@@ -97,7 +97,8 @@ class Leaderboard extends Component {
       <div>
         {this.state.isLoaded ? (
           <div>
-            { this.props.isAuthenticated ? <button onClick={this.logout}>Logout</button> : <Link to="/login">Login</Link>}
+            { this.props.isAuthenticated ? <button onClick={this.logout}>Logout</button>
+            : (<div><Link to="/login">Login</Link> or <Link to="/signup">Sign Up</Link></div>)}
             <LBJtron info={this.state.pga_leaderboard.leaderboard} />
             <LBTracked
               tracked={this.state.tracking}
@@ -128,7 +129,6 @@ class Leaderboard extends Component {
   }
 }
 function mapStateToProps(state){
-  console.log(state);
   return {
     isAuthenticated: !!state.user.token
   }

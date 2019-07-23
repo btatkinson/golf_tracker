@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './LoginForm.scss';
 import Validator from 'validator';
 import InlineError from '../messages/InlineError';
 import '../../styles/Login.scss';

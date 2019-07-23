@@ -5,6 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import rootReducer from './rootReducer';
+import decode from 'jwt-decode';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { userLoggedIn } from './actions/auth'
 import './index.css';
@@ -17,7 +18,8 @@ const store = createStore(
 );
 
 if (localStorage.golftrackerJWT){
-  const user = { token: localStorage.golftrackerJWT };
+  const payload = decode(localStorage.golftrackerJWT);
+  const user = { token: localStorage.golftrackerJWT, email: payload.email, confirmed: payload.confirmed };
   store.dispatch(userLoggedIn(user));
 }
 
