@@ -5,6 +5,7 @@ import Login from './components/pages/Login';
 import Signup from './components/pages/Signup';
 import Dashboard from './components/pages/Dashboard';
 import Confirmation from './components/pages/Confirmation';
+import ForgotPassword from './components/pages/ForgotPassword';
 import UserRoute from './components/routes/UserRoute';
 import GuestRoute from './components/routes/GuestRoute';
 import './App.scss';
@@ -19,6 +20,7 @@ class App extends Component{
           <Route location={window.location} exact path='/confirmation/:token' component={Confirmation} />
           <GuestRoute location={window.location} exact path='/login' component={Login} />
           <GuestRoute location={window.location} exact path='/signup' component={Signup} />
+          <GuestRoute location={window.location} exact path='/forgot_password' component={ForgotPassword} />
           <UserRoute location={window.location} exact path='/dashboard' component={Dashboard} />
         </Switch>
       </div>
